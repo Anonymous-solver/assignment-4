@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Profile from "./components/profile.component";
+import Projects from "./components/projects.component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+	render() {
+		return (
+			<>
+				<Profile></Profile>
+				<hr />
+				<Projects></Projects>
+
+				{/* <button disabled = {this.makeDisable} style={this.btnStyle}>Click me</button> */}
+				{/* {
+          this.arr.map(name => {
+            return (
+              <li key={name}>{name}</li>
+            )
+          })
+        } */}
+			</>
+		);
+	}
 }
 
 export default App;
